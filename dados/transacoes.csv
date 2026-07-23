@@ -1,0 +1,247 @@
+﻿transacao_id,cliente_id,conta_id,data,descricao,categoria,subcategoria,valor,tipo,forma_pagamento,parcelado,parcela_atual,total_parcelas,recorrente,essencial,origem_dado
+TRX-00001,CLI-0001,CONTA-0001,2026-01-05,Salário,renda,salario,5000.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00002,CLI-0001,CONTA-0001,2026-01-06,Aluguel,moradia,aluguel,1200.0,saida,pix,false,1,,true,true,sintetico
+TRX-00003,CLI-0001,CONTA-0001,2026-01-08,Internet,moradia,internet,109.9,saida,debito_automatico,false,1,,true,true,sintetico
+TRX-00004,CLI-0001,CARTAO-0001,2026-01-10,Academia,saude,academia,99.9,saida,credito,false,1,,true,false,sintetico
+TRX-00005,CLI-0001,CARTAO-0001,2026-01-12,Streaming,lazer,assinatura,55.9,saida,credito,false,1,,true,false,sintetico
+TRX-00006,CLI-0001,CARTAO-0001,2026-01-15,Parcela notebook,compras,eletronicos,300.0,saida,credito,true,1,6,true,false,sintetico
+TRX-00007,CLI-0001,CONTA-0001,2026-01-18,Conta de luz,moradia,energia,194.76,saida,debito_automatico,false,1,,true,true,sintetico
+TRX-00008,CLI-0001,CARTAO-0001,2026-01-07,Supermercado,alimentacao,mercado,183.5,saida,credito,false,,,false,true,sintetico
+TRX-00009,CLI-0001,CARTAO-0001,2026-01-14,Supermercado,alimentacao,mercado,218.5,saida,credito,false,,,false,true,sintetico
+TRX-00010,CLI-0001,CARTAO-0001,2026-01-21,Supermercado,alimentacao,mercado,211.25,saida,credito,false,,,false,true,sintetico
+TRX-00011,CLI-0001,CARTAO-0001,2026-01-22,Restaurante,alimentacao,restaurante,146.28,saida,credito,false,,,false,false,sintetico
+TRX-00012,CLI-0001,CONTA-0001,2026-01-24,Combustível,transporte,combustivel,294.44,saida,debito,false,,,false,true,sintetico
+TRX-00013,CLI-0001,CONTA-0001,2026-01-27,Aporte reserva,investimento,reserva_emergencia,500.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00014,CLI-0001,CONTA-0001,2026-02-05,Salário,renda,salario,5000.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00015,CLI-0001,CONTA-0001,2026-02-20,Freelance,renda,renda_extra,450.0,entrada,pix,false,,,false,false,sintetico
+TRX-00016,CLI-0001,CONTA-0001,2026-02-06,Aluguel,moradia,aluguel,1200.0,saida,pix,false,2,,true,true,sintetico
+TRX-00017,CLI-0001,CONTA-0001,2026-02-08,Internet,moradia,internet,109.9,saida,debito_automatico,false,2,,true,true,sintetico
+TRX-00018,CLI-0001,CARTAO-0001,2026-02-10,Academia,saude,academia,99.9,saida,credito,false,2,,true,false,sintetico
+TRX-00019,CLI-0001,CARTAO-0001,2026-02-12,Streaming,lazer,assinatura,55.9,saida,credito,false,2,,true,false,sintetico
+TRX-00020,CLI-0001,CARTAO-0001,2026-02-15,Parcela notebook,compras,eletronicos,300.0,saida,credito,true,2,6,true,false,sintetico
+TRX-00021,CLI-0001,CONTA-0001,2026-02-18,Conta de luz,moradia,energia,212.45,saida,debito_automatico,false,2,,true,true,sintetico
+TRX-00022,CLI-0001,CARTAO-0001,2026-02-07,Supermercado,alimentacao,mercado,192.17,saida,credito,false,,,false,true,sintetico
+TRX-00023,CLI-0001,CARTAO-0001,2026-02-14,Supermercado,alimentacao,mercado,239.07,saida,credito,false,,,false,true,sintetico
+TRX-00024,CLI-0001,CARTAO-0001,2026-02-21,Supermercado,alimentacao,mercado,184.17,saida,credito,false,,,false,true,sintetico
+TRX-00025,CLI-0001,CARTAO-0001,2026-02-22,Restaurante,alimentacao,restaurante,99.68,saida,credito,false,,,false,false,sintetico
+TRX-00026,CLI-0001,CONTA-0001,2026-02-24,Combustível,transporte,combustivel,275.59,saida,debito,false,,,false,true,sintetico
+TRX-00027,CLI-0001,CONTA-0001,2026-02-27,Aporte reserva,investimento,reserva_emergencia,500.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00028,CLI-0001,CONTA-0001,2026-03-05,Salário,renda,salario,5000.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00029,CLI-0001,CONTA-0001,2026-03-06,Aluguel,moradia,aluguel,1200.0,saida,pix,false,3,,true,true,sintetico
+TRX-00030,CLI-0001,CONTA-0001,2026-03-08,Internet,moradia,internet,109.9,saida,debito_automatico,false,3,,true,true,sintetico
+TRX-00031,CLI-0001,CARTAO-0001,2026-03-10,Academia,saude,academia,99.9,saida,credito,false,3,,true,false,sintetico
+TRX-00032,CLI-0001,CARTAO-0001,2026-03-12,Streaming,lazer,assinatura,55.9,saida,credito,false,3,,true,false,sintetico
+TRX-00033,CLI-0001,CARTAO-0001,2026-03-15,Parcela notebook,compras,eletronicos,300.0,saida,credito,true,3,6,true,false,sintetico
+TRX-00034,CLI-0001,CONTA-0001,2026-03-18,Conta de luz,moradia,energia,151.86,saida,debito_automatico,false,3,,true,true,sintetico
+TRX-00035,CLI-0001,CARTAO-0001,2026-03-07,Supermercado,alimentacao,mercado,207.84,saida,credito,false,,,false,true,sintetico
+TRX-00036,CLI-0001,CARTAO-0001,2026-03-14,Supermercado,alimentacao,mercado,270.98,saida,credito,false,,,false,true,sintetico
+TRX-00037,CLI-0001,CARTAO-0001,2026-03-21,Supermercado,alimentacao,mercado,256.29,saida,credito,false,,,false,true,sintetico
+TRX-00038,CLI-0001,CARTAO-0001,2026-03-22,Restaurante,alimentacao,restaurante,99.84,saida,credito,false,,,false,false,sintetico
+TRX-00039,CLI-0001,CONTA-0001,2026-03-24,Combustível,transporte,combustivel,284.82,saida,debito,false,,,false,true,sintetico
+TRX-00040,CLI-0001,CONTA-0001,2026-03-27,Aporte reserva,investimento,reserva_emergencia,500.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00041,CLI-0001,CONTA-0001,2026-04-05,Salário,renda,salario,5000.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00042,CLI-0001,CONTA-0001,2026-04-06,Aluguel,moradia,aluguel,1200.0,saida,pix,false,4,,true,true,sintetico
+TRX-00043,CLI-0001,CONTA-0001,2026-04-08,Internet,moradia,internet,109.9,saida,debito_automatico,false,4,,true,true,sintetico
+TRX-00044,CLI-0001,CARTAO-0001,2026-04-10,Academia,saude,academia,99.9,saida,credito,false,4,,true,false,sintetico
+TRX-00045,CLI-0001,CARTAO-0001,2026-04-12,Streaming,lazer,assinatura,55.9,saida,credito,false,4,,true,false,sintetico
+TRX-00046,CLI-0001,CARTAO-0001,2026-04-15,Parcela notebook,compras,eletronicos,300.0,saida,credito,true,4,6,true,false,sintetico
+TRX-00047,CLI-0001,CONTA-0001,2026-04-18,Conta de luz,moradia,energia,206.66,saida,debito_automatico,false,4,,true,true,sintetico
+TRX-00048,CLI-0001,CARTAO-0001,2026-04-07,Supermercado,alimentacao,mercado,180.91,saida,credito,false,,,false,true,sintetico
+TRX-00049,CLI-0001,CARTAO-0001,2026-04-14,Supermercado,alimentacao,mercado,292.81,saida,credito,false,,,false,true,sintetico
+TRX-00050,CLI-0001,CARTAO-0001,2026-04-21,Supermercado,alimentacao,mercado,277.74,saida,credito,false,,,false,true,sintetico
+TRX-00051,CLI-0001,CARTAO-0001,2026-04-22,Restaurante,alimentacao,restaurante,110.62,saida,credito,false,,,false,false,sintetico
+TRX-00052,CLI-0001,CONTA-0001,2026-04-24,Combustível,transporte,combustivel,237.1,saida,debito,false,,,false,true,sintetico
+TRX-00053,CLI-0001,CONTA-0001,2026-04-27,Aporte reserva,investimento,reserva_emergencia,500.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00054,CLI-0001,CONTA-0001,2026-05-05,Salário,renda,salario,5000.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00055,CLI-0001,CONTA-0001,2026-05-20,Freelance,renda,renda_extra,450.0,entrada,pix,false,,,false,false,sintetico
+TRX-00056,CLI-0001,CONTA-0001,2026-05-06,Aluguel,moradia,aluguel,1200.0,saida,pix,false,5,,true,true,sintetico
+TRX-00057,CLI-0001,CONTA-0001,2026-05-08,Internet,moradia,internet,109.9,saida,debito_automatico,false,5,,true,true,sintetico
+TRX-00058,CLI-0001,CARTAO-0001,2026-05-10,Academia,saude,academia,99.9,saida,credito,false,5,,true,false,sintetico
+TRX-00059,CLI-0001,CARTAO-0001,2026-05-12,Streaming,lazer,assinatura,55.9,saida,credito,false,5,,true,false,sintetico
+TRX-00060,CLI-0001,CARTAO-0001,2026-05-15,Parcela notebook,compras,eletronicos,300.0,saida,credito,true,5,6,true,false,sintetico
+TRX-00061,CLI-0001,CONTA-0001,2026-05-18,Conta de luz,moradia,energia,217.0,saida,debito_automatico,false,5,,true,true,sintetico
+TRX-00062,CLI-0001,CARTAO-0001,2026-05-07,Supermercado,alimentacao,mercado,227.12,saida,credito,false,,,false,true,sintetico
+TRX-00063,CLI-0001,CARTAO-0001,2026-05-14,Supermercado,alimentacao,mercado,192.98,saida,credito,false,,,false,true,sintetico
+TRX-00064,CLI-0001,CARTAO-0001,2026-05-21,Supermercado,alimentacao,mercado,193.54,saida,credito,false,,,false,true,sintetico
+TRX-00065,CLI-0001,CARTAO-0001,2026-05-22,Restaurante,alimentacao,restaurante,156.27,saida,credito,false,,,false,false,sintetico
+TRX-00066,CLI-0001,CONTA-0001,2026-05-24,Combustível,transporte,combustivel,286.41,saida,debito,false,,,false,true,sintetico
+TRX-00067,CLI-0001,CONTA-0001,2026-05-27,Aporte reserva,investimento,reserva_emergencia,500.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00068,CLI-0001,CONTA-0001,2026-06-05,Salário,renda,salario,5000.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00069,CLI-0001,CONTA-0001,2026-06-06,Aluguel,moradia,aluguel,1200.0,saida,pix,false,6,,true,true,sintetico
+TRX-00070,CLI-0001,CONTA-0001,2026-06-08,Internet,moradia,internet,109.9,saida,debito_automatico,false,6,,true,true,sintetico
+TRX-00071,CLI-0001,CARTAO-0001,2026-06-10,Academia,saude,academia,99.9,saida,credito,false,6,,true,false,sintetico
+TRX-00072,CLI-0001,CARTAO-0001,2026-06-12,Streaming,lazer,assinatura,55.9,saida,credito,false,6,,true,false,sintetico
+TRX-00073,CLI-0001,CARTAO-0001,2026-06-15,Parcela notebook,compras,eletronicos,300.0,saida,credito,true,6,6,true,false,sintetico
+TRX-00074,CLI-0001,CONTA-0001,2026-06-18,Conta de luz,moradia,energia,206.5,saida,debito_automatico,false,6,,true,true,sintetico
+TRX-00075,CLI-0001,CARTAO-0001,2026-06-07,Supermercado,alimentacao,mercado,282.16,saida,credito,false,,,false,true,sintetico
+TRX-00076,CLI-0001,CARTAO-0001,2026-06-14,Supermercado,alimentacao,mercado,255.07,saida,credito,false,,,false,true,sintetico
+TRX-00077,CLI-0001,CARTAO-0001,2026-06-21,Supermercado,alimentacao,mercado,316.24,saida,credito,false,,,false,true,sintetico
+TRX-00078,CLI-0001,CARTAO-0001,2026-06-22,Restaurante,alimentacao,restaurante,114.07,saida,credito,false,,,false,false,sintetico
+TRX-00079,CLI-0001,CONTA-0001,2026-06-24,Combustível,transporte,combustivel,280.72,saida,debito,false,,,false,true,sintetico
+TRX-00080,CLI-0001,CONTA-0001,2026-06-27,Aporte reserva,investimento,reserva_emergencia,500.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00081,CLI-0002,CONTA-0002,2026-01-08,Recebimentos de projetos,renda,freelance,3100.0,entrada,pix,false,,,false,true,sintetico
+TRX-00082,CLI-0002,CONTA-0002,2026-01-05,Aluguel,moradia,aluguel,1100.0,saida,pix,false,,,true,true,sintetico
+TRX-00083,CLI-0002,CONTA-0002,2026-01-09,Internet,moradia,internet,119.9,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00084,CLI-0002,CARTAO-0002,2026-01-11,Software de design,trabalho,software,149.9,saida,credito,false,,,true,true,sintetico
+TRX-00085,CLI-0002,CONTA-0002,2026-01-14,Coworking,trabalho,coworking,280.0,saida,pix,false,,,true,false,sintetico
+TRX-00086,CLI-0002,CARTAO-0002,2026-01-17,Streaming,lazer,assinatura,39.9,saida,credito,false,,,true,false,sintetico
+TRX-00087,CLI-0002,CONTA-0002,2026-01-20,Conta de luz,moradia,energia,168.06,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00088,CLI-0002,CARTAO-0002,2026-01-06,Supermercado,alimentacao,mercado,260.41,saida,credito,false,,,false,true,sintetico
+TRX-00089,CLI-0002,CARTAO-0002,2026-01-18,Supermercado,alimentacao,mercado,292.02,saida,credito,false,,,false,true,sintetico
+TRX-00090,CLI-0002,CARTAO-0002,2026-01-22,Delivery,alimentacao,delivery,129.28,saida,credito,false,,,false,false,sintetico
+TRX-00091,CLI-0002,CONTA-0002,2026-01-24,Transporte por aplicativo,transporte,aplicativo,218.64,saida,pix,false,,,false,true,sintetico
+TRX-00092,CLI-0002,CONTA-0002,2026-01-28,Aporte reserva,investimento,reserva_emergencia,150.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00093,CLI-0002,CONTA-0002,2026-02-08,Recebimentos de projetos,renda,freelance,5200.0,entrada,pix,false,,,false,true,sintetico
+TRX-00094,CLI-0002,CONTA-0002,2026-02-05,Aluguel,moradia,aluguel,1100.0,saida,pix,false,,,true,true,sintetico
+TRX-00095,CLI-0002,CONTA-0002,2026-02-09,Internet,moradia,internet,119.9,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00096,CLI-0002,CARTAO-0002,2026-02-11,Software de design,trabalho,software,149.9,saida,credito,false,,,true,true,sintetico
+TRX-00097,CLI-0002,CONTA-0002,2026-02-14,Coworking,trabalho,coworking,280.0,saida,pix,false,,,true,false,sintetico
+TRX-00098,CLI-0002,CARTAO-0002,2026-02-17,Streaming,lazer,assinatura,39.9,saida,credito,false,,,true,false,sintetico
+TRX-00099,CLI-0002,CONTA-0002,2026-02-20,Conta de luz,moradia,energia,113.21,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00100,CLI-0002,CARTAO-0002,2026-02-06,Supermercado,alimentacao,mercado,209.63,saida,credito,false,,,false,true,sintetico
+TRX-00101,CLI-0002,CARTAO-0002,2026-02-18,Supermercado,alimentacao,mercado,217.62,saida,credito,false,,,false,true,sintetico
+TRX-00102,CLI-0002,CARTAO-0002,2026-02-22,Delivery,alimentacao,delivery,69.58,saida,credito,false,,,false,false,sintetico
+TRX-00103,CLI-0002,CONTA-0002,2026-02-24,Transporte por aplicativo,transporte,aplicativo,152.59,saida,pix,false,,,false,true,sintetico
+TRX-00104,CLI-0002,CONTA-0002,2026-02-28,Aporte reserva,investimento,reserva_emergencia,400.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00105,CLI-0002,CONTA-0002,2026-03-08,Recebimentos de projetos,renda,freelance,3700.0,entrada,pix,false,,,false,true,sintetico
+TRX-00106,CLI-0002,CONTA-0002,2026-03-25,Venda de ilustrações,renda,renda_extra,650.0,entrada,pix,false,,,false,false,sintetico
+TRX-00107,CLI-0002,CONTA-0002,2026-03-05,Aluguel,moradia,aluguel,1100.0,saida,pix,false,,,true,true,sintetico
+TRX-00108,CLI-0002,CONTA-0002,2026-03-09,Internet,moradia,internet,119.9,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00109,CLI-0002,CARTAO-0002,2026-03-11,Software de design,trabalho,software,149.9,saida,credito,false,,,true,true,sintetico
+TRX-00110,CLI-0002,CONTA-0002,2026-03-14,Coworking,trabalho,coworking,280.0,saida,pix,false,,,true,false,sintetico
+TRX-00111,CLI-0002,CARTAO-0002,2026-03-17,Streaming,lazer,assinatura,39.9,saida,credito,false,,,true,false,sintetico
+TRX-00112,CLI-0002,CONTA-0002,2026-03-20,Conta de luz,moradia,energia,117.07,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00113,CLI-0002,CARTAO-0002,2026-03-06,Supermercado,alimentacao,mercado,216.14,saida,credito,false,,,false,true,sintetico
+TRX-00114,CLI-0002,CARTAO-0002,2026-03-18,Supermercado,alimentacao,mercado,262.64,saida,credito,false,,,false,true,sintetico
+TRX-00115,CLI-0002,CARTAO-0002,2026-03-22,Delivery,alimentacao,delivery,103.78,saida,credito,false,,,false,false,sintetico
+TRX-00116,CLI-0002,CONTA-0002,2026-03-24,Transporte por aplicativo,transporte,aplicativo,171.83,saida,pix,false,,,false,true,sintetico
+TRX-00117,CLI-0002,CONTA-0002,2026-03-28,Aporte reserva,investimento,reserva_emergencia,400.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00118,CLI-0002,CONTA-0002,2026-04-08,Recebimentos de projetos,renda,freelance,6100.0,entrada,pix,false,,,false,true,sintetico
+TRX-00119,CLI-0002,CONTA-0002,2026-04-05,Aluguel,moradia,aluguel,1100.0,saida,pix,false,,,true,true,sintetico
+TRX-00120,CLI-0002,CONTA-0002,2026-04-09,Internet,moradia,internet,119.9,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00121,CLI-0002,CARTAO-0002,2026-04-11,Software de design,trabalho,software,149.9,saida,credito,false,,,true,true,sintetico
+TRX-00122,CLI-0002,CONTA-0002,2026-04-14,Coworking,trabalho,coworking,280.0,saida,pix,false,,,true,false,sintetico
+TRX-00123,CLI-0002,CARTAO-0002,2026-04-17,Streaming,lazer,assinatura,39.9,saida,credito,false,,,true,false,sintetico
+TRX-00124,CLI-0002,CONTA-0002,2026-04-20,Conta de luz,moradia,energia,124.67,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00125,CLI-0002,CARTAO-0002,2026-04-06,Supermercado,alimentacao,mercado,214.71,saida,credito,false,,,false,true,sintetico
+TRX-00126,CLI-0002,CARTAO-0002,2026-04-18,Supermercado,alimentacao,mercado,301.77,saida,credito,false,,,false,true,sintetico
+TRX-00127,CLI-0002,CARTAO-0002,2026-04-22,Delivery,alimentacao,delivery,137.76,saida,credito,false,,,false,false,sintetico
+TRX-00128,CLI-0002,CONTA-0002,2026-04-24,Transporte por aplicativo,transporte,aplicativo,205.28,saida,pix,false,,,false,true,sintetico
+TRX-00129,CLI-0002,CONTA-0002,2026-04-28,Aporte reserva,investimento,reserva_emergencia,400.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00130,CLI-0002,CARTAO-0002,2026-04-26,Manutenção do notebook,imprevistos,manutencao,950.0,saida,credito,true,1,3,false,true,sintetico
+TRX-00131,CLI-0002,CONTA-0002,2026-05-08,Recebimentos de projetos,renda,freelance,2900.0,entrada,pix,false,,,false,true,sintetico
+TRX-00132,CLI-0002,CONTA-0002,2026-05-05,Aluguel,moradia,aluguel,1100.0,saida,pix,false,,,true,true,sintetico
+TRX-00133,CLI-0002,CONTA-0002,2026-05-09,Internet,moradia,internet,119.9,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00134,CLI-0002,CARTAO-0002,2026-05-11,Software de design,trabalho,software,149.9,saida,credito,false,,,true,true,sintetico
+TRX-00135,CLI-0002,CONTA-0002,2026-05-14,Coworking,trabalho,coworking,280.0,saida,pix,false,,,true,false,sintetico
+TRX-00136,CLI-0002,CARTAO-0002,2026-05-17,Streaming,lazer,assinatura,39.9,saida,credito,false,,,true,false,sintetico
+TRX-00137,CLI-0002,CONTA-0002,2026-05-20,Conta de luz,moradia,energia,121.98,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00138,CLI-0002,CARTAO-0002,2026-05-06,Supermercado,alimentacao,mercado,274.79,saida,credito,false,,,false,true,sintetico
+TRX-00139,CLI-0002,CARTAO-0002,2026-05-18,Supermercado,alimentacao,mercado,201.24,saida,credito,false,,,false,true,sintetico
+TRX-00140,CLI-0002,CARTAO-0002,2026-05-22,Delivery,alimentacao,delivery,105.53,saida,credito,false,,,false,false,sintetico
+TRX-00141,CLI-0002,CONTA-0002,2026-05-24,Transporte por aplicativo,transporte,aplicativo,258.53,saida,pix,false,,,false,true,sintetico
+TRX-00142,CLI-0002,CONTA-0002,2026-05-28,Aporte reserva,investimento,reserva_emergencia,150.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00143,CLI-0002,CONTA-0002,2026-06-08,Recebimentos de projetos,renda,freelance,4800.0,entrada,pix,false,,,false,true,sintetico
+TRX-00144,CLI-0002,CONTA-0002,2026-06-25,Venda de ilustrações,renda,renda_extra,650.0,entrada,pix,false,,,false,false,sintetico
+TRX-00145,CLI-0002,CONTA-0002,2026-06-05,Aluguel,moradia,aluguel,1100.0,saida,pix,false,,,true,true,sintetico
+TRX-00146,CLI-0002,CONTA-0002,2026-06-09,Internet,moradia,internet,119.9,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00147,CLI-0002,CARTAO-0002,2026-06-11,Software de design,trabalho,software,149.9,saida,credito,false,,,true,true,sintetico
+TRX-00148,CLI-0002,CONTA-0002,2026-06-14,Coworking,trabalho,coworking,280.0,saida,pix,false,,,true,false,sintetico
+TRX-00149,CLI-0002,CARTAO-0002,2026-06-17,Streaming,lazer,assinatura,39.9,saida,credito,false,,,true,false,sintetico
+TRX-00150,CLI-0002,CONTA-0002,2026-06-20,Conta de luz,moradia,energia,154.8,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00151,CLI-0002,CARTAO-0002,2026-06-06,Supermercado,alimentacao,mercado,252.4,saida,credito,false,,,false,true,sintetico
+TRX-00152,CLI-0002,CARTAO-0002,2026-06-18,Supermercado,alimentacao,mercado,269.0,saida,credito,false,,,false,true,sintetico
+TRX-00153,CLI-0002,CARTAO-0002,2026-06-22,Delivery,alimentacao,delivery,161.14,saida,credito,false,,,false,false,sintetico
+TRX-00154,CLI-0002,CONTA-0002,2026-06-24,Transporte por aplicativo,transporte,aplicativo,228.64,saida,pix,false,,,false,true,sintetico
+TRX-00155,CLI-0002,CONTA-0002,2026-06-28,Aporte reserva,investimento,reserva_emergencia,400.0,saida,transferencia,false,,,true,true,sintetico
+TRX-00156,CLI-0003,CONTA-0003,2026-01-05,Salário base,renda,salario,5600.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00157,CLI-0003,CONTA-0003,2026-01-22,Comissões,renda,comissao,900.0,entrada,transferencia,false,,,false,true,sintetico
+TRX-00158,CLI-0003,CONTA-0003,2026-01-06,Financiamento da casa,moradia,financiamento,1800.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00159,CLI-0003,CONTA-0003,2026-01-08,Escola dos filhos,educacao,mensalidade,980.0,saida,boleto,false,,,true,true,sintetico
+TRX-00160,CLI-0003,CONTA-0003,2026-01-10,Plano de saúde,saude,plano_saude,690.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00161,CLI-0003,CONTA-0003,2026-01-12,Parcela cartão renegociado,dividas,cartao,720.0,saida,boleto,false,,,true,true,sintetico
+TRX-00162,CLI-0003,CONTA-0003,2026-01-14,Parcela empréstimo,dividas,emprestimo,540.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00163,CLI-0003,CONTA-0003,2026-01-18,Internet e celular,moradia,telecomunicacoes,230.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00164,CLI-0003,CONTA-0003,2026-01-20,Conta de luz,moradia,energia,267.49,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00165,CLI-0003,CARTAO-0003,2026-01-04,Supermercado,alimentacao,mercado,267.06,saida,credito,false,,,false,true,sintetico
+TRX-00166,CLI-0003,CARTAO-0003,2026-01-10,Supermercado,alimentacao,mercado,329.4,saida,credito,false,,,false,true,sintetico
+TRX-00167,CLI-0003,CARTAO-0003,2026-01-16,Supermercado,alimentacao,mercado,318.9,saida,credito,false,,,false,true,sintetico
+TRX-00168,CLI-0003,CARTAO-0003,2026-01-22,Supermercado,alimentacao,mercado,306.42,saida,credito,false,,,false,true,sintetico
+TRX-00169,CLI-0003,CONTA-0003,2026-01-17,Combustível,transporte,combustivel,685.73,saida,debito,false,,,false,true,sintetico
+TRX-00170,CLI-0003,CARTAO-0003,2026-01-26,Lazer em família,lazer,passeio,390.33,saida,credito,false,,,false,false,sintetico
+TRX-00171,CLI-0003,CONTA-0003,2026-02-05,Salário base,renda,salario,5600.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00172,CLI-0003,CONTA-0003,2026-02-22,Comissões,renda,comissao,1600.0,entrada,transferencia,false,,,false,true,sintetico
+TRX-00173,CLI-0003,CONTA-0003,2026-02-06,Financiamento da casa,moradia,financiamento,1800.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00174,CLI-0003,CONTA-0003,2026-02-08,Escola dos filhos,educacao,mensalidade,980.0,saida,boleto,false,,,true,true,sintetico
+TRX-00175,CLI-0003,CONTA-0003,2026-02-10,Plano de saúde,saude,plano_saude,690.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00176,CLI-0003,CONTA-0003,2026-02-12,Parcela cartão renegociado,dividas,cartao,720.0,saida,boleto,false,,,true,true,sintetico
+TRX-00177,CLI-0003,CONTA-0003,2026-02-14,Parcela empréstimo,dividas,emprestimo,540.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00178,CLI-0003,CONTA-0003,2026-02-18,Internet e celular,moradia,telecomunicacoes,230.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00179,CLI-0003,CONTA-0003,2026-02-20,Conta de luz,moradia,energia,277.76,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00180,CLI-0003,CARTAO-0003,2026-02-04,Supermercado,alimentacao,mercado,404.2,saida,credito,false,,,false,true,sintetico
+TRX-00181,CLI-0003,CARTAO-0003,2026-02-10,Supermercado,alimentacao,mercado,347.04,saida,credito,false,,,false,true,sintetico
+TRX-00182,CLI-0003,CARTAO-0003,2026-02-16,Supermercado,alimentacao,mercado,461.2,saida,credito,false,,,false,true,sintetico
+TRX-00183,CLI-0003,CARTAO-0003,2026-02-22,Supermercado,alimentacao,mercado,360.95,saida,credito,false,,,false,true,sintetico
+TRX-00184,CLI-0003,CONTA-0003,2026-02-17,Combustível,transporte,combustivel,516.22,saida,debito,false,,,false,true,sintetico
+TRX-00185,CLI-0003,CARTAO-0003,2026-02-26,Lazer em família,lazer,passeio,239.19,saida,credito,false,,,false,false,sintetico
+TRX-00186,CLI-0003,CARTAO-0003,2026-02-27,Conserto do carro,imprevistos,veiculo,1800.0,saida,credito,true,1,6,false,true,sintetico
+TRX-00187,CLI-0003,CONTA-0003,2026-03-05,Salário base,renda,salario,5600.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00188,CLI-0003,CONTA-0003,2026-03-22,Comissões,renda,comissao,700.0,entrada,transferencia,false,,,false,true,sintetico
+TRX-00189,CLI-0003,CONTA-0003,2026-03-06,Financiamento da casa,moradia,financiamento,1800.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00190,CLI-0003,CONTA-0003,2026-03-08,Escola dos filhos,educacao,mensalidade,980.0,saida,boleto,false,,,true,true,sintetico
+TRX-00191,CLI-0003,CONTA-0003,2026-03-10,Plano de saúde,saude,plano_saude,690.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00192,CLI-0003,CONTA-0003,2026-03-12,Parcela cartão renegociado,dividas,cartao,720.0,saida,boleto,false,,,true,true,sintetico
+TRX-00193,CLI-0003,CONTA-0003,2026-03-14,Parcela empréstimo,dividas,emprestimo,540.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00194,CLI-0003,CONTA-0003,2026-03-18,Internet e celular,moradia,telecomunicacoes,230.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00195,CLI-0003,CONTA-0003,2026-03-20,Conta de luz,moradia,energia,307.36,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00196,CLI-0003,CARTAO-0003,2026-03-04,Supermercado,alimentacao,mercado,317.8,saida,credito,false,,,false,true,sintetico
+TRX-00197,CLI-0003,CARTAO-0003,2026-03-10,Supermercado,alimentacao,mercado,388.61,saida,credito,false,,,false,true,sintetico
+TRX-00198,CLI-0003,CARTAO-0003,2026-03-16,Supermercado,alimentacao,mercado,457.52,saida,credito,false,,,false,true,sintetico
+TRX-00199,CLI-0003,CARTAO-0003,2026-03-22,Supermercado,alimentacao,mercado,347.87,saida,credito,false,,,false,true,sintetico
+TRX-00200,CLI-0003,CONTA-0003,2026-03-17,Combustível,transporte,combustivel,504.83,saida,debito,false,,,false,true,sintetico
+TRX-00201,CLI-0003,CARTAO-0003,2026-03-26,Lazer em família,lazer,passeio,419.41,saida,credito,false,,,false,false,sintetico
+TRX-00202,CLI-0003,CONTA-0003,2026-04-05,Salário base,renda,salario,5600.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00203,CLI-0003,CONTA-0003,2026-04-22,Comissões,renda,comissao,2100.0,entrada,transferencia,false,,,false,true,sintetico
+TRX-00204,CLI-0003,CONTA-0003,2026-04-06,Financiamento da casa,moradia,financiamento,1800.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00205,CLI-0003,CONTA-0003,2026-04-08,Escola dos filhos,educacao,mensalidade,980.0,saida,boleto,false,,,true,true,sintetico
+TRX-00206,CLI-0003,CONTA-0003,2026-04-10,Plano de saúde,saude,plano_saude,690.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00207,CLI-0003,CONTA-0003,2026-04-12,Parcela cartão renegociado,dividas,cartao,720.0,saida,boleto,false,,,true,true,sintetico
+TRX-00208,CLI-0003,CONTA-0003,2026-04-14,Parcela empréstimo,dividas,emprestimo,540.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00209,CLI-0003,CONTA-0003,2026-04-18,Internet e celular,moradia,telecomunicacoes,230.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00210,CLI-0003,CONTA-0003,2026-04-20,Conta de luz,moradia,energia,301.14,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00211,CLI-0003,CARTAO-0003,2026-04-04,Supermercado,alimentacao,mercado,280.0,saida,credito,false,,,false,true,sintetico
+TRX-00212,CLI-0003,CARTAO-0003,2026-04-10,Supermercado,alimentacao,mercado,270.37,saida,credito,false,,,false,true,sintetico
+TRX-00213,CLI-0003,CARTAO-0003,2026-04-16,Supermercado,alimentacao,mercado,284.12,saida,credito,false,,,false,true,sintetico
+TRX-00214,CLI-0003,CARTAO-0003,2026-04-22,Supermercado,alimentacao,mercado,398.04,saida,credito,false,,,false,true,sintetico
+TRX-00215,CLI-0003,CONTA-0003,2026-04-17,Combustível,transporte,combustivel,648.02,saida,debito,false,,,false,true,sintetico
+TRX-00216,CLI-0003,CARTAO-0003,2026-04-26,Lazer em família,lazer,passeio,281.32,saida,credito,false,,,false,false,sintetico
+TRX-00217,CLI-0003,CONTA-0003,2026-05-05,Salário base,renda,salario,5600.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00218,CLI-0003,CONTA-0003,2026-05-22,Comissões,renda,comissao,1200.0,entrada,transferencia,false,,,false,true,sintetico
+TRX-00219,CLI-0003,CONTA-0003,2026-05-06,Financiamento da casa,moradia,financiamento,1800.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00220,CLI-0003,CONTA-0003,2026-05-08,Escola dos filhos,educacao,mensalidade,980.0,saida,boleto,false,,,true,true,sintetico
+TRX-00221,CLI-0003,CONTA-0003,2026-05-10,Plano de saúde,saude,plano_saude,690.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00222,CLI-0003,CONTA-0003,2026-05-12,Parcela cartão renegociado,dividas,cartao,720.0,saida,boleto,false,,,true,true,sintetico
+TRX-00223,CLI-0003,CONTA-0003,2026-05-14,Parcela empréstimo,dividas,emprestimo,540.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00224,CLI-0003,CONTA-0003,2026-05-18,Internet e celular,moradia,telecomunicacoes,230.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00225,CLI-0003,CONTA-0003,2026-05-20,Conta de luz,moradia,energia,247.62,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00226,CLI-0003,CARTAO-0003,2026-05-04,Supermercado,alimentacao,mercado,343.96,saida,credito,false,,,false,true,sintetico
+TRX-00227,CLI-0003,CARTAO-0003,2026-05-10,Supermercado,alimentacao,mercado,479.15,saida,credito,false,,,false,true,sintetico
+TRX-00228,CLI-0003,CARTAO-0003,2026-05-16,Supermercado,alimentacao,mercado,376.41,saida,credito,false,,,false,true,sintetico
+TRX-00229,CLI-0003,CARTAO-0003,2026-05-22,Supermercado,alimentacao,mercado,473.64,saida,credito,false,,,false,true,sintetico
+TRX-00230,CLI-0003,CONTA-0003,2026-05-17,Combustível,transporte,combustivel,665.19,saida,debito,false,,,false,true,sintetico
+TRX-00231,CLI-0003,CARTAO-0003,2026-05-26,Lazer em família,lazer,passeio,182.76,saida,credito,false,,,false,false,sintetico
+TRX-00232,CLI-0003,CONTA-0003,2026-06-05,Salário base,renda,salario,5600.0,entrada,transferencia,false,,,true,true,sintetico
+TRX-00233,CLI-0003,CONTA-0003,2026-06-22,Comissões,renda,comissao,1800.0,entrada,transferencia,false,,,false,true,sintetico
+TRX-00234,CLI-0003,CONTA-0003,2026-06-06,Financiamento da casa,moradia,financiamento,1800.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00235,CLI-0003,CONTA-0003,2026-06-08,Escola dos filhos,educacao,mensalidade,980.0,saida,boleto,false,,,true,true,sintetico
+TRX-00236,CLI-0003,CONTA-0003,2026-06-10,Plano de saúde,saude,plano_saude,690.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00237,CLI-0003,CONTA-0003,2026-06-12,Parcela cartão renegociado,dividas,cartao,720.0,saida,boleto,false,,,true,true,sintetico
+TRX-00238,CLI-0003,CONTA-0003,2026-06-14,Parcela empréstimo,dividas,emprestimo,540.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00239,CLI-0003,CONTA-0003,2026-06-18,Internet e celular,moradia,telecomunicacoes,230.0,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00240,CLI-0003,CONTA-0003,2026-06-20,Conta de luz,moradia,energia,326.49,saida,debito_automatico,false,,,true,true,sintetico
+TRX-00241,CLI-0003,CARTAO-0003,2026-06-04,Supermercado,alimentacao,mercado,409.98,saida,credito,false,,,false,true,sintetico
+TRX-00242,CLI-0003,CARTAO-0003,2026-06-10,Supermercado,alimentacao,mercado,378.13,saida,credito,false,,,false,true,sintetico
+TRX-00243,CLI-0003,CARTAO-0003,2026-06-16,Supermercado,alimentacao,mercado,318.7,saida,credito,false,,,false,true,sintetico
+TRX-00244,CLI-0003,CARTAO-0003,2026-06-22,Supermercado,alimentacao,mercado,401.01,saida,credito,false,,,false,true,sintetico
+TRX-00245,CLI-0003,CONTA-0003,2026-06-17,Combustível,transporte,combustivel,477.89,saida,debito,false,,,false,true,sintetico
+TRX-00246,CLI-0003,CARTAO-0003,2026-06-26,Lazer em família,lazer,passeio,284.34,saida,credito,false,,,false,false,sintetico

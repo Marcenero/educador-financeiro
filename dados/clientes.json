@@ -1,0 +1,104 @@
+[
+  {
+    "cliente_id": "CLI-0001",
+    "nome_ficticio": "João Silva",
+    "idade": 32,
+    "profissao": "Analista de Sistemas",
+    "estado_civil": "casado",
+    "dependentes": 1,
+    "cidade": "São Paulo",
+    "uf": "SP",
+    "renda": {
+      "tipo": "fixa",
+      "renda_mensal_media": 5000.0,
+      "renda_extra_media": 250.0
+    },
+    "perfil_financeiro": {
+      "perfil_investidor": "moderado",
+      "conhecimento_financeiro": "basico",
+      "tolerancia_risco": 2,
+      "aceita_perda_temporaria": false,
+      "horizonte_investimento": "medio_prazo"
+    },
+    "situacao_financeira": {
+      "patrimonio_total": 15000.0,
+      "reserva_emergencia_atual": 10000.0,
+      "divida_total": 1200.0,
+      "limite_cartao": 6000.0
+    },
+    "objetivo_principal": "Completar a reserva de emergência",
+    "preferencias": {
+      "tom": "didatico",
+      "canal_preferido": "chat",
+      "frequencia_alertas": "semanal"
+    }
+  },
+  {
+    "cliente_id": "CLI-0002",
+    "nome_ficticio": "Mariana Costa",
+    "idade": 27,
+    "profissao": "Designer freelancer",
+    "estado_civil": "solteira",
+    "dependentes": 0,
+    "cidade": "Campinas",
+    "uf": "SP",
+    "renda": {
+      "tipo": "variavel",
+      "renda_mensal_media": 4200.0,
+      "renda_extra_media": 700.0
+    },
+    "perfil_financeiro": {
+      "perfil_investidor": "conservador",
+      "conhecimento_financeiro": "iniciante",
+      "tolerancia_risco": 1,
+      "aceita_perda_temporaria": false,
+      "horizonte_investimento": "curto_prazo"
+    },
+    "situacao_financeira": {
+      "patrimonio_total": 6200.0,
+      "reserva_emergencia_atual": 3500.0,
+      "divida_total": 0.0,
+      "limite_cartao": 3500.0
+    },
+    "objetivo_principal": "Organizar a renda variável e criar previsibilidade",
+    "preferencias": {
+      "tom": "acolhedor",
+      "canal_preferido": "aplicativo",
+      "frequencia_alertas": "quinzenal"
+    }
+  },
+  {
+    "cliente_id": "CLI-0003",
+    "nome_ficticio": "Carlos Mendes",
+    "idade": 45,
+    "profissao": "Representante comercial",
+    "estado_civil": "casado",
+    "dependentes": 2,
+    "cidade": "Sorocaba",
+    "uf": "SP",
+    "renda": {
+      "tipo": "mista",
+      "renda_mensal_media": 6800.0,
+      "renda_extra_media": 1200.0
+    },
+    "perfil_financeiro": {
+      "perfil_investidor": "moderado",
+      "conhecimento_financeiro": "intermediario",
+      "tolerancia_risco": 2,
+      "aceita_perda_temporaria": true,
+      "horizonte_investimento": "longo_prazo"
+    },
+    "situacao_financeira": {
+      "patrimonio_total": 38000.0,
+      "reserva_emergencia_atual": 4500.0,
+      "divida_total": 14800.0,
+      "limite_cartao": 12000.0
+    },
+    "objetivo_principal": "Reduzir dívidas e reorganizar o orçamento familiar",
+    "preferencias": {
+      "tom": "direto",
+      "canal_preferido": "whatsapp",
+      "frequencia_alertas": "semanal"
+    }
+  }
+]

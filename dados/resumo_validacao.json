@@ -1,0 +1,26 @@
+{
+  "CLI-0001": {
+    "nome": "João Silva",
+    "transacoes": 80,
+    "entradas": 30900.0,
+    "saidas": 21351.61,
+    "saldo_periodo": 9548.39,
+    "metas": 2
+  },
+  "CLI-0002": {
+    "nome": "Mariana Costa",
+    "transacoes": 75,
+    "entradas": 27100.0,
+    "saidas": 18702.94,
+    "saldo_periodo": 8397.06,
+    "metas": 2
+  },
+  "CLI-0003": {
+    "nome": "Carlos Mendes",
+    "transacoes": 91,
+    "entradas": 41900.0,
+    "saidas": 47303.57,
+    "saldo_periodo": -5403.57,
+    "metas": 2
+  }
+}

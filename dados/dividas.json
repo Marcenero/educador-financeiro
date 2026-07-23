@@ -1,0 +1,32 @@
+[
+  {
+    "divida_id": "DIV-0001",
+    "cliente_id": "CLI-0001",
+    "tipo": "parcelamento_eletronico",
+    "saldo_devedor": 1200.0,
+    "taxa_mensal": 0.0,
+    "parcelas_restantes": 4,
+    "parcela_mensal": 300.0,
+    "status": "ativa"
+  },
+  {
+    "divida_id": "DIV-0002",
+    "cliente_id": "CLI-0003",
+    "tipo": "cartao_rotativo_parcelado",
+    "saldo_devedor": 6800.0,
+    "taxa_mensal": 0.079,
+    "parcelas_restantes": 12,
+    "parcela_mensal": 720.0,
+    "status": "ativa"
+  },
+  {
+    "divida_id": "DIV-0003",
+    "cliente_id": "CLI-0003",
+    "tipo": "emprestimo_pessoal",
+    "saldo_devedor": 8000.0,
+    "taxa_mensal": 0.026,
+    "parcelas_restantes": 18,
+    "parcela_mensal": 540.0,
+    "status": "ativa"
+  }
+]

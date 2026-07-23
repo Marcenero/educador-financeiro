@@ -1,0 +1,44 @@
+[
+  {
+    "conta_id": "CONTA-0001",
+    "cliente_id": "CLI-0001",
+    "tipo": "conta_corrente",
+    "instituicao_ficticia": "Banco Aurora",
+    "status": "ativa"
+  },
+  {
+    "conta_id": "CARTAO-0001",
+    "cliente_id": "CLI-0001",
+    "tipo": "cartao_credito",
+    "instituicao_ficticia": "Banco Aurora",
+    "status": "ativo"
+  },
+  {
+    "conta_id": "CONTA-0002",
+    "cliente_id": "CLI-0002",
+    "tipo": "conta_digital",
+    "instituicao_ficticia": "Banco Horizonte",
+    "status": "ativa"
+  },
+  {
+    "conta_id": "CARTAO-0002",
+    "cliente_id": "CLI-0002",
+    "tipo": "cartao_credito",
+    "instituicao_ficticia": "Banco Horizonte",
+    "status": "ativo"
+  },
+  {
+    "conta_id": "CONTA-0003",
+    "cliente_id": "CLI-0003",
+    "tipo": "conta_corrente",
+    "instituicao_ficticia": "Banco Lume",
+    "status": "ativa"
+  },
+  {
+    "conta_id": "CARTAO-0003",
+    "cliente_id": "CLI-0003",
+    "tipo": "cartao_credito",
+    "instituicao_ficticia": "Banco Lume",
+    "status": "ativo"
+  }
+]

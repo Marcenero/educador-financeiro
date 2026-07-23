@@ -1,0 +1,11 @@
+﻿atendimento_id,cliente_id,data,canal,tema,resumo,resolvido,intencao
+ATD-0001,CLI-0001,2026-01-12,chat,Reserva de emergência,Cliente quis entender o valor recomendado para a reserva.,sim,orientacao
+ATD-0002,CLI-0001,2026-03-18,chat,Gastos com alimentação,Cliente pediu comparação entre mercado e restaurantes.,sim,analise_gastos
+ATD-0003,CLI-0001,2026-05-09,email,Meta do apartamento,Cliente perguntou como acompanhar duas metas simultâneas.,sim,metas
+ATD-0004,CLI-0002,2026-01-20,chat,Renda variável,Cliente relatou dificuldade para definir orçamento fixo.,sim,orcamento
+ATD-0005,CLI-0002,2026-04-27,chat,Gasto inesperado,Cliente perguntou como absorver a manutenção do notebook.,sim,emergencia
+ATD-0006,CLI-0002,2026-06-15,aplicativo,Reserva financeira,Cliente acompanhou a evolução da reserva para meses fracos.,sim,metas
+ATD-0007,CLI-0003,2026-01-15,telefone,Dívidas,Cliente solicitou visão consolidada das parcelas.,sim,dividas
+ATD-0008,CLI-0003,2026-02-28,chat,Conserto do carro,Cliente perguntou sobre impacto do imprevisto no orçamento.,sim,emergencia
+ATD-0009,CLI-0003,2026-04-11,chat,Comprometimento da renda,Cliente quis saber quanto da renda estava comprometido.,sim,analise_gastos
+ATD-0010,CLI-0003,2026-06-25,email,Quitação antecipada,Cliente perguntou sobre priorização de dívidas.,nao,dividas
