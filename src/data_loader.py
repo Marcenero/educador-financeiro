@@ -167,6 +167,118 @@ def carregar_metas() -> list[MetaFinanceira]:
 def carregar_dividas() -> list[Divida]:
     return _carregar_lista_json("dividas.json", Divida)
 
+
+def carregar_produtos() -> list[dict[str, Any]]:
+    """
+    Carrega e valida o catálogo de produtos financeiros.
+
+    Os produtos são globais: não pertencem a um cliente específico.
+    O cruzamento com o perfil do cliente é feito posteriormente pelo
+    products_service.py.
+    """
+    dados = _carregar_json_bruto("produtos_financeiros.json")
+
+    if not isinstance(dados, list):
+        raise ErroCarregamentoDados(
+            "A raiz de produtos_financeiros.json deve ser uma lista."
+        )
+
+    campos_obrigatorios = {
+        "produto_id",
+        "nome",
+        "categoria",
+        "risco",
+        "aporte_minimo",
+        "indicado_para",
+    }
+
+    riscos_validos = {"baixo", "medio", "alto"}
+    produtos_validados: list[dict[str, Any]] = []
+    ids_encontrados: set[str] = set()
+    erros: list[str] = []
+
+    for indice, produto in enumerate(dados, start=1):
+        if not isinstance(produto, dict):
+            erros.append(f"Produto {indice}: deve ser um objeto JSON.")
+            continue
+
+        ausentes = campos_obrigatorios - set(produto)
+        if ausentes:
+            erros.append(
+                f"Produto {indice}: campos ausentes: "
+                + ", ".join(sorted(ausentes))
+            )
+            continue
+
+        produto_id = str(produto["produto_id"]).strip()
+        nome = str(produto["nome"]).strip()
+        categoria = str(produto["categoria"]).strip().lower()
+        risco = str(produto["risco"]).strip().lower()
+        indicado_para = str(produto["indicado_para"]).strip()
+
+        try:
+            aporte_minimo = float(produto["aporte_minimo"])
+        except (TypeError, ValueError):
+            erros.append(
+                f"Produto {indice}: aporte_minimo deve ser numérico."
+            )
+            continue
+
+        if not produto_id:
+            erros.append(f"Produto {indice}: produto_id não pode ser vazio.")
+            continue
+
+        if produto_id in ids_encontrados:
+            erros.append(
+                f"Produto {indice}: produto_id duplicado: {produto_id}."
+            )
+            continue
+
+        if not nome:
+            erros.append(f"Produto {indice}: nome não pode ser vazio.")
+            continue
+
+        if risco not in riscos_validos:
+            erros.append(
+                f"Produto {indice}: risco deve ser baixo, medio ou alto."
+            )
+            continue
+
+        if aporte_minimo < 0:
+            erros.append(
+                f"Produto {indice}: aporte_minimo não pode ser negativo."
+            )
+            continue
+
+        if not indicado_para:
+            erros.append(
+                f"Produto {indice}: indicado_para não pode ser vazio."
+            )
+            continue
+
+        normalizado = dict(produto)
+        normalizado["produto_id"] = produto_id
+        normalizado["nome"] = nome
+        normalizado["categoria"] = categoria
+        normalizado["risco"] = risco
+        normalizado["aporte_minimo"] = aporte_minimo
+        normalizado["indicado_para"] = indicado_para
+
+        ids_encontrados.add(produto_id)
+        produtos_validados.append(normalizado)
+
+    if erros:
+        detalhes = "\n- ".join(erros[:10])
+        if len(erros) > 10:
+            detalhes += f"\n... e mais {len(erros) - 10} erro(s)."
+
+        raise ErroCarregamentoDados(
+            "Foram encontrados erros em produtos_financeiros.json:\n- "
+            + detalhes
+        )
+
+    return produtos_validados
+
 def carregar_cliente(cliente_id: str) -> Cliente:
     """
     Busca um cliente único pelo identificador
@@ -412,6 +524,7 @@ def validar_integridade_referencial(
     contas = carregar_contas()
     metas = carregar_metas()
     dividas = carregar_dividas()
+    carregar_produtos()
     transacoes = carregar_transacoes(
         corrigir_inconsistencias=corrigir_inconsistencias
     )
@@ -558,9 +671,11 @@ def main() -> None:
     avisos = validar_integridade_referencial(corrigir_inconsistencias=True)
 
     clientes = listar_clientes_para_interface()
+    produtos = carregar_produtos()
 
     print("Base carregada e validada com sucesso.")
     print(f"Clientes encontrados: {len(clientes)}")
+    print(f"Produtos financeiros encontrados: {len(produtos)}")
 
     for item in clientes:
         contexto = carregar_contexto_cliente(
