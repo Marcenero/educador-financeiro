@@ -168,12 +168,12 @@ def calcular_resumo_financeiro(
 
     return {
         "periodo_inicial": (
-            dados["data"].min().date().isoformat()
+            dados["data"].min().strftime("%d/%m/%Y")
             if not dados.empty
             else None
         ),
         "periodo_final": (
-            dados["data"].max().date().isoformat()
+            dados["data"].max().strftime("%d/%m/%Y")
             if not dados.empty
             else None
         ),
@@ -237,6 +237,27 @@ def consultar_gastos_categoria(
         transacoes,
         data_inicial,
         data_final,
+    )
+
+    if dados.empty:
+        periodo_inicial = None
+        periodo_final = None
+        periodo_formatado = None
+    else:
+        periodo_inicial = (
+            dados["data"]
+            .min()
+            .strftime("%d/%m/%Y")
+        )
+
+        periodo_final = (
+            dados["data"]
+            .max()
+            .strftime("%d/%m/%Y")
+        )
+
+    periodo_formatado = (
+        f"{periodo_inicial} a {periodo_final}"
     )
 
     saidas = dados[
