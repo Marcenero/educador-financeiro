@@ -14,7 +14,7 @@ class ErroServicoMetas(ValueError):
 def calcular_progresso_meta(
     meta: MetaFinanceira,
 ) -> dict[str, Any]:
-    percentual = meta.valor_atual * meta.valor_alvo * 100
+    percentual = meta.valor_atual / meta.valor_alvo * 100
     valor_faltante = max(
         meta.valor_alvo - meta.valor_atual,
         0,
@@ -26,7 +26,7 @@ def calcular_progresso_meta(
         "categoria": meta.categoria,
         "valor_alvo": round(meta.valor_alvo, 2),
         "valor_atual": round(meta.valor_atual, 2),
-        "valor_faltante": round(meta.valor_faltante, 2),
+        "valor_faltante": round(valor_faltante, 2),
         "percentual_concluido": round(
             min(percentual, 100),
             2,

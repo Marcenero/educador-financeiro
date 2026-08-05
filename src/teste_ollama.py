@@ -6,7 +6,6 @@ def main() -> None:
     modelo = criar_modelo_ollama()
 
     resposta = modelo.invoke(
-        # "/no_think\n"
         "Responda em português, em uma frase: "
         "o que é uma reserva de emergência?"
     )

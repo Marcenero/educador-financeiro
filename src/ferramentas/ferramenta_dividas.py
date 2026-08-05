@@ -1,8 +1,7 @@
 from __future__ import annotations
 
 from typing import Any
-
-from langchain.tools import BaseTool, tool
+from langchain_core.tools import BaseTool, tool
 
 from data_loader import carregar_contexto_cliente
 from servicos.servico_dividas import (
@@ -12,11 +11,16 @@ from servicos.servico_dividas import (
 )
 
 def criar_ferramentas_dividas(cliente_id: str) -> list[BaseTool]:
-    """Cria ferramentas de dívidas vinculadas ao cliente selecionado"""
+    """Cria ferramentas de dívidas vinculadas ao cliente selecionado."""
 
     @tool
-    # Consulta saldo devedor, parcelas mensais e renda comprometida
     def consultar_resumo_dividas() -> dict[str, Any]:
+        """
+        Consulta saldo devedor, parcelas mensais e renda comprometida.
+
+        Use esta ferramenta para obter um resumo geral das dívidas
+        do cliente selecionado.
+        """
         contexto = carregar_contexto_cliente(cliente_id)
         resultado = calcular_resumo_dividas(
             dividas=contexto.dividas,
@@ -30,8 +34,12 @@ def criar_ferramentas_dividas(cliente_id: str) -> list[BaseTool]:
         }
 
     @tool
-    # Lista as dívidas da maior para a menor taxa mensal conhecida
     def consultar_dividas_por_taxa() -> dict[str, Any]:
+        """
+        Lista as dívidas da maior para a menor taxa mensal conhecida.
+
+        Use esta ferramenta para comparar o custo mensal das dívidas.
+        """
         contexto = carregar_contexto_cliente(cliente_id)
         return {
             "cliente_id": cliente_id,
@@ -41,12 +49,19 @@ def criar_ferramentas_dividas(cliente_id: str) -> list[BaseTool]:
         }
 
     @tool
-    # Identifica a dívida ativa com a maior taxa mensal conhecida
     def consultar_divida_com_maior_taxa() -> dict[str, Any]:
+        """
+        Identifica a dívida ativa com a maior taxa mensal conhecida.
+
+        Use esta ferramenta quando o usuário perguntar qual dívida
+        possui a maior taxa.
+        """
         contexto = carregar_contexto_cliente(cliente_id)
         return {
             "cliente_id": cliente_id,
-            "divida_maior_taxa": identificar_divida_maior_taxa(contexto.dividas),
+            "divida_maior_taxa": identificar_divida_maior_taxa(
+                contexto.dividas
+            ),
             "fonte": "dividas.json",
             "tipo_resultado": "calculo_deterministico",
         }
@@ -54,5 +69,5 @@ def criar_ferramentas_dividas(cliente_id: str) -> list[BaseTool]:
     return [
         consultar_resumo_dividas,
         consultar_dividas_por_taxa,
-        consultar_divida_com_maior_taxa
+        consultar_divida_com_maior_taxa,
     ]

@@ -84,7 +84,7 @@ class PreferenciasCliente(ModeloBase):
 
 class Cliente(ModeloBase):
     cliente_id: str = Field(pattern=r"^CLI-\d{4}$")
-    nome_ficticio = str = Field(min_length=3, max_length=100)
+    nome_ficticio: str = Field(min_length=3, max_length=100)
     idade: int = Field(ge=18, le=120)
     profissao: str = Field(min_length=2, max_length=100)
     estado_civil: Literal["solteiro", "solteira", "casado", "casada", "divorciado", "divorciada", "viuvo", "viuva", "uniao_estavel"]
@@ -182,7 +182,7 @@ class Transacao(ModeloBase):
         if self.parcela_atual is None or self.total_parcelas is None:
             raise ValueError("Transação parcelada deve informar parcela_atual e total_parcelas.")
 
-        if self.parcela_Atual > self.total_parcelas:
+        if self.parcela_atual > self.total_parcelas:
             raise ValueError("parcela_atual não pode ser maior que total_parcelas.")
 
         return self

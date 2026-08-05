@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import unicodedata
 from typing import Any
 
 import pandas as pd
@@ -43,7 +44,12 @@ def _validar_dataframe(transacoes: pd.DataFrame) -> pd.DataFrame:
     if (dados["valor"] <= 0).any():
         raise ErroServicoTransacoes("Todos os valores de transação devem ser positivos.")
 
-    dados["tipo"] = dados["tipo"].astype(str).str.strip().str.lower()
+    dados["tipo"] = (
+        dados["tipo"]
+        .astype(str)
+        .map(_normalizar_texto)
+    )
+
     tipos_invalidos = set(dados["tipo"].unique()) - {"entrada", "saida"}
 
     if tipos_invalidos:
@@ -53,10 +59,25 @@ def _validar_dataframe(transacoes: pd.DataFrame) -> pd.DataFrame:
         )
 
     dados["categoria"] = (
-        dados["categoria"].astype(str).str.strip().str.lower()
+    dados["categoria"]
+        .astype(str)
+        .map(_normalizar_texto)
     )
+
     dados["subcategoria"] = (
-        dados["subcategoria"].astype(str).str.strip().str.lower()
+        dados["subcategoria"]
+        .astype(str)
+        .map(_normalizar_texto)
+    )
+
+    dados["recorrente"] = (
+        dados["recorrente"]
+        .map(_normalizar_booleano)
+    )
+
+    dados["essencial"] = (
+        dados["essencial"]
+        .map(_normalizar_booleano)
     )
 
     return dados
@@ -68,17 +89,55 @@ def filtrar_periodo(
 ) -> pd.DataFrame:
     dados = _validar_dataframe(transacoes)
 
-    inicio = pd.Timestamp(data_inicial) if data_inicial else None
-    fim = pd.Timestamp(data_final) if data_final else None
+    data_inicial = (
+        data_inicial.strip()
+        if data_inicial and data_inicial.strip()
+        else None
+    )
 
-    if inicio is not None and fim is not None and inicio > fim:
-        raise ErroServicoTransacoes("data_inicial não pode ser posterior a data_final.")
+    data_final = (
+        data_final.strip()
+        if data_final and data_final.strip()
+        else None
+    )
+
+    try:
+        inicio = (
+            pd.Timestamp(data_inicial)
+            if data_inicial
+            else None
+        )
+
+        fim = (
+            pd.Timestamp(data_final)
+            if data_final
+            else None
+        )
+
+    except (ValueError, TypeError) as erro:
+        raise ErroServicoTransacoes(
+            "As datas devem estar no formato AAAA-MM-DD."
+        ) from erro
+
+    if (
+        inicio is not None
+        and fim is not None
+        and inicio > fim
+    ):
+        raise ErroServicoTransacoes(
+            "data_inicial não pode ser posterior "
+            "a data_final."
+        )
 
     if inicio is not None:
-        dados = dados[dados["data"] >= inicio]
+        dados = dados[
+            dados["data"] >= inicio
+        ]
 
     if fim is not None:
-        dados = dados[dados["data"] <= fim]
+        dados = dados[
+            dados["data"] <= fim
+        ]
 
     return dados.copy()
 
@@ -160,10 +219,19 @@ def consultar_gastos_categoria(
     data_inicial: str | None = None,
     data_final: str | None = None,
 ) -> dict[str, Any]:
-    if not categoria or not categoria.strip():
-        raise ErroServicoTransacoes("A categoria deve ser informada.")
+    """
+    Consulta os gastos de uma categoria específica.
 
-    categoria_normalizada = categoria.strip().lower()
+    A comparação ignora diferenças de maiúsculas, espaços e acentos.
+    """
+    if not categoria or not categoria.strip():
+        raise ErroServicoTransacoes(
+            "A categoria deve ser informada."
+        )
+
+    categoria_normalizada = _normalizar_texto(
+        categoria
+    )
 
     dados = filtrar_periodo(
         transacoes,
@@ -171,24 +239,58 @@ def consultar_gastos_categoria(
         data_final,
     )
 
-    dados = dados[
-        (dados["tipo"] == "saida")
-        & (dados["categoria"] == categoria_normalizada)
+    saidas = dados[
+        dados["tipo"] == "saida"
+    ].copy()
+
+    categorias_disponiveis = sorted(
+        saidas["categoria"]
+        .dropna()
+        .astype(str)
+        .unique()
+        .tolist()
+    )
+
+    categoria_encontrada = (
+        categoria_normalizada
+        in categorias_disponiveis
+    )
+
+    registros = saidas[
+        saidas["categoria"]
+        == categoria_normalizada
     ].copy()
 
     return {
-        "categoria": categoria_normalizada,
-        "valor_total": round(float(dados["valor"].sum()), 2),
-        "quantidade_transacoes": int(len(dados)),
+        "categoria_consultada": categoria,
+        "categoria_normalizada": categoria_normalizada,
+        "categoria_encontrada": categoria_encontrada,
+        "valor_total": round(
+            float(registros["valor"].sum()),
+            2,
+        ),
+        "quantidade_transacoes": int(
+            len(registros)
+        ),
+        "categorias_disponiveis": categorias_disponiveis,
         "transacoes": [
             {
                 "data": linha.data.date().isoformat(),
                 "descricao": linha.descricao,
                 "subcategoria": linha.subcategoria,
-                "valor": round(float(linha.valor), 2),
-                "forma_pagamento": linha.forma_pagamento,
+                "valor": round(
+                    float(linha.valor),
+                    2,
+                ),
+                "forma_pagamento": (
+                    linha.forma_pagamento
+                ),
             }
-            for linha in dados.sort_values("data").itertuples()
+            for linha in (
+                registros
+                .sort_values("data")
+                .itertuples()
+            )
         ],
     }
 
@@ -232,7 +334,7 @@ def listar_gastos_recorrentes(
 
     recorrentes = dados[
         (dados["tipo"] == "saida")
-        & (dados["recorrente"].astype(bool))
+        & (dados["recorrente"])
     ].copy()
 
     agrupado = (
@@ -268,7 +370,7 @@ def calcular_percentual_despesas_essenciais(
     total_saidas = float(saidas["valor"].sum())
     total_essenciais = float(
         saidas.loc[
-            saidas["essencial"].astype(bool),
+            saidas["essencial"],
             "valor",
         ].sum()
     )
@@ -327,3 +429,38 @@ def comparar_meses(
         )
 
     return resultado
+
+def _normalizar_texto(valor: Any) -> str:
+    """
+    Normaliza textos para comparação.
+
+    Remove espaços, converte para minúsculas e retira acentos.
+    """
+    texto = str(valor).strip().lower()
+
+    texto_sem_acentos = unicodedata.normalize(
+        "NFKD",
+        texto,
+    )
+
+    return "".join(
+        caractere
+        for caractere in texto_sem_acentos
+        if not unicodedata.combining(caractere)
+    )
+
+def _normalizar_booleano(valor: Any) -> bool:
+    if isinstance(valor, bool):
+        return valor
+
+    texto = _normalizar_texto(valor)
+
+    if texto in {"true", "1", "sim", "s"}:
+        return True
+
+    if texto in {"false", "0", "nao", "n"}:
+        return False
+
+    raise ErroServicoTransacoes(
+        f"Valor booleano inválido: {valor!r}"
+    )
