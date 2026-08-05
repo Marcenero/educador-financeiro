@@ -211,3 +211,28 @@ def adicionar_fontes(
         f"{resposta.rstrip()}\n\n"
         f"Fonte: {fontes_formatadas}."
     )
+
+def validar_entrada_visitante(
+    pergunta: str,
+) -> str:
+    """Valida perguntas realizadas pelo perfil visitante."""
+    if not pergunta or not pergunta.strip():
+        raise ErroSeguranca(
+            "A pergunta não pode estar vazia."
+        )
+
+    pergunta = pergunta.strip()
+
+    if len(pergunta) > 2000:
+        raise ErroSeguranca(
+            "A pergunta ultrapassa o limite de "
+            "2.000 caracteres."
+        )
+
+    if PADRAO_CLIENTE.search(pergunta):
+        raise ErroSeguranca(
+            "O perfil visitante não pode consultar "
+            "identificadores de clientes."
+        )
+
+    return pergunta

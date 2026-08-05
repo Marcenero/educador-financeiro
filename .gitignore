@@ -1,0 +1,85 @@
+# Variáveis de ambiente e segredos
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Ambientes virtuais Python
+.venv/
+venv/
+env/
+ENV/
+
+# Cache e arquivos compilados do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Testes, cobertura e análise
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+.mypy_cache/
+.pyright/
+.ruff_cache/
+.tox/
+.nox/
+
+# Builds e empacotamento
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Logs e auditoria local
+logs/
+*.log
+
+# Bancos e checkpoints locais
+*.db
+*.sqlite
+*.sqlite3
+checkpoints/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+~$*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs e editores
+.vscode/
+.idea/
+*.code-workspace
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Arquivos gerados localmente
+artifacts/
+outputs/
