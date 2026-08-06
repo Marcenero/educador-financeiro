@@ -54,15 +54,18 @@ def configurar_pagina() -> None:
     )
 
 def inicializar_estado() -> None:
+    """Inicializa os dados da sessão do navegador"""
+    if "sessao_id" not in st.session_state:
+        st.session_state["sessao_id"] = (
+            criar_id_sessao()
+        )
+
     if "historicos" not in st.session_state:
-        st.session_state.historicos = {
+        st.session_state["historicos"] = {
             perfil_id: [
                 {
                     "role": "assistant",
-                    "content": (
-                        "Olá! Sou o FinGuia. "
-                        "Como posso ajudar?"
-                    ),
+                    "content": MENSAGEM_INICIAL,
                 }
             ]
             for perfil_id in PERFIS
@@ -142,7 +145,7 @@ def exibir_historico(
 ) -> None:
     for mensagem in historico:
         with st.chat_message(mensagem["role"]):
-            st.markdown(mensagem["content"])
+            exibir_resposta_markdown(mensagem["content"])
 
 def processar_pergunta(
     perfil_id: str,
@@ -194,12 +197,11 @@ def processar_pergunta(
 
             except Exception:
                 resposta = (
-                    "Ocorreu um erro inesperado ao "
-                    "processar a solicitação."
+                    "Ocorreu um erro inesperado ao processar a solicitação."
                 )
                 st.error(resposta)
 
-        st.markdown(resposta)
+        exibir_resposta_markdown(resposta)
 
     historico.append(
         {
@@ -220,7 +222,7 @@ def main() -> None:
     if perfil_id == PERFIL_VISITANTE:
         st.caption("Modo visitante: sem acesso a dados financeiros pessoais.")
     else:
-        st.caption(f"Sessão vinculadao a {PERFIS[perfil_id]['nome']} - {perfil_id}")
+        st.caption(f"Sessão vinculada a {PERFIS[perfil_id]['nome']} - {perfil_id}")
 
     exibir_historico(historico)
 
@@ -235,6 +237,17 @@ def main() -> None:
             pergunta=pergunta,
             historico=historico,
         )
+
+def exibir_resposta_markdown(
+    texto: str,
+) -> None:
+    """Exibe texto preservando símbolos monetários."""
+    texto_formatado = texto.replace(
+        "$",
+        r"\$",
+    )
+
+    st.markdown(texto_formatado)
 
 if __name__ == "__main__":
     main()
