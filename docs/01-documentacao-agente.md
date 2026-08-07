@@ -116,6 +116,9 @@ Resposta ao usuário
 | Auditoria | Registrar execução, ferramentas, fontes e status |
 
 ## 5. Estrutura sugerida
+## Estrutura do projeto
+
+```
 educador-financeiro/
 ├── .env
 ├── .gitignore
@@ -128,7 +131,8 @@ educador-financeiro/
 │   ├── dividas.json
 │   ├── transacoes.csv
 │   ├── historico_atendimento.csv
-│   └── produtos_financeiros.json
+│   ├── produtos_financeiros.json
+│   └── resumo_validacao.json
 ├── docs/
 │   ├── 01-documentacao-agente.md
 │   ├── 02-base-conhecimento.md
@@ -140,11 +144,14 @@ educador-financeiro/
 │   ├── agent.py
 │   ├── auditoria.py
 │   ├── data_loader.py
+│   ├── diagnostico_ollama.py
 │   ├── memoria.py
 │   ├── model_config.py
 │   ├── prompts.py
 │   ├── schemas.py
 │   ├── seguranca.py
+│   ├── teste_agente.py
+│   ├── teste_ollama.py
 │   ├── ferramentas/
 │   │   ├── ferramenta_dividas.py
 │   │   ├── ferramenta_metas.py
@@ -157,11 +164,22 @@ educador-financeiro/
 │       ├── servico_produtos.py
 │       └── servico_transacoes.py
 └── testes/
+    ├── conftest.py
     ├── teste_app.py
     ├── teste_auditoria.py
+    ├── teste_data_loader.py
+    ├── teste_ferramentas.py
     ├── teste_fluxos_e2e.py
+    ├── teste_integracao_agente.py
     ├── teste_memoria.py
-    └── teste_seguranca.py
+    ├── teste_prompts.py
+    ├── teste_seguranca.py
+    ├── teste_servico_dividas.py
+    ├── teste_servico_metas.py
+    ├── teste_servico_produtos.py
+    ├── teste_servico_transacoes.py
+    └── teste_unidade_agente.py
+```
 
 ## 6. Tecnologias
 
