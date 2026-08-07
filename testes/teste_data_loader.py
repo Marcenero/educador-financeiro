@@ -28,7 +28,7 @@ def teste_carregar_cliente_existente(cliente_joao_id):
 
     assert cliente.cliente_id == "CLI-0001"
     assert cliente.nome_ficticio == "João Silva"
-    assert cliente.renda.renda_mensal_bruta == 5000.0
+    assert cliente.renda.renda_mensal_media == 5000.0
 
 def teste_cliente_inexistente_gera_erro():
     with pytest.raises(

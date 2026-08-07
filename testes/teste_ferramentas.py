@@ -5,13 +5,13 @@ from ferramentas.toolkit import criar_ferramentas_cliente
 
 def _por_nome(cliente_id: str):
     ferramentas = criar_ferramentas_cliente(cliente_id)
-    return {ferramenta.nome: ferramenta for ferramenta in ferramentas}
+    return {ferramenta.name: ferramenta for ferramenta in ferramentas}
 
 
 def teste_toolkit_possui_ferramentas():
     ferramentas = criar_ferramentas_cliente("CLI-0001")
     assert len(ferramentas) == 15
-    assert len({ferramenta.nome for ferramenta in ferramentas}) == 15
+    assert len({ferramenta.name for ferramenta in ferramentas}) == 15
 
 
 def teste_cliente_id_nao_e_argumento_das_ferramentas():

@@ -90,7 +90,7 @@ def teste_consultar_categoria_existente(cliente_mariana_id):
         categoria="alimentacao",
     )
 
-    assert resultado["categoria"] == "alimentacao"
+    assert resultado["categoria_normalizada"] == "alimentacao"
     assert resultado["valor_total"] > 0
     assert resultado["quantidade_transacoes"] > 0
 

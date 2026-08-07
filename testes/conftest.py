@@ -12,13 +12,13 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 @pytest.fixture
-def client_joao_id() -> str:
+def cliente_joao_id() -> str:
     return "CLI-0001"
 
 @pytest.fixture
-def client_mariana_id() -> str:
+def cliente_mariana_id() -> str:
     return "CLI-0002"
 
 @pytest.fixture
-def client_carlos_id() -> str:
+def cliente_carlos_id() -> str:
     return "CLI-0003"
